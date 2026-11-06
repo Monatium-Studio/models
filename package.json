@@ -4,5 +4,7 @@
   "type": "module",
   "scripts": {
     "model": "node scripts/blender.mjs"
-  }
+  },
+  "license": "MIT",
+  "author": "Monatium Studio <dev@monatium.com>"
 }
