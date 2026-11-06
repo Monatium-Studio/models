@@ -1,0 +1,8 @@
+{
+  "name": "monatium-models",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "model": "node scripts/blender.mjs"
+  }
+}

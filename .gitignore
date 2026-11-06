@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+public/models/_tmp/
+shots/
+node_modules/
+.DS_Store
