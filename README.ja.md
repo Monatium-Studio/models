@@ -31,14 +31,14 @@ Node.js 20.19 以上（または 22.12 以上）が必要です。
 
 ```sh
 npm install              # 初回のみ（エンジンと Vite を取得します）
-npm run viewer           # 開発サーバー → http://127.0.0.1:5180/
+npm run viewer           # 開発サーバー → http://127.0.0.1:5190/
 ```
 
 静的サイトとしてビルドすることもできます。モデルを含む成果物が `dist/` に出力され、どのパスに置いても動きます。
 
 ```sh
 npm run viewer:build     # dist/ にビルド
-npm run viewer:preview   # ビルド結果を確認 → http://127.0.0.1:5181/
+npm run viewer:preview   # ビルド結果を確認 → http://127.0.0.1:5191/
 ```
 
 **操作**

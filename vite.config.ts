@@ -4,7 +4,7 @@ import { join, relative } from 'node:path';
 
 /**
  * 모델 뷰어 (strawberry-cake-engine의 뷰어로 public/models 아래 .glb를 본다).
- *   npm run viewer          개발 서버 → http://127.0.0.1:5180/
+ *   npm run viewer          개발 서버 → http://127.0.0.1:5190/
  *   npm run viewer:build    dist/에 정적 사이트로 빌드 (모델 포함)
  *   npm run viewer:preview  빌드 결과 띄우기
  */
@@ -46,8 +46,8 @@ function modelsIndex(): Plugin {
 
 export default defineConfig({
   base: './',
-  server: { host: '127.0.0.1', port: 5180, hmr: false },
-  preview: { host: '127.0.0.1', port: 5181 },
+  server: { host: '127.0.0.1', port: 5190, hmr: false },
+  preview: { host: '127.0.0.1', port: 5191 },
   plugins: [modelsIndex()],
   // 엔진은 TypeScript 소스로 배포된다. 미리 묶지 않고 그대로 변환한다
   optimizeDeps: { exclude: ['strawberry-cake-engine'], include: ['three'] },

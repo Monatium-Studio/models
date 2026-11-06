@@ -31,14 +31,14 @@ Requires Node.js 20.19 or later (or 22.12 or later).
 
 ```sh
 npm install              # once (fetches the engine and Vite)
-npm run viewer           # dev server → http://127.0.0.1:5180/
+npm run viewer           # dev server → http://127.0.0.1:5190/
 ```
 
 You can also build it as a static site. The output, models included, goes to `dist/` and works from any path.
 
 ```sh
 npm run viewer:build     # build into dist/
-npm run viewer:preview   # check the build → http://127.0.0.1:5181/
+npm run viewer:preview   # check the build → http://127.0.0.1:5191/
 ```
 
 **Controls**

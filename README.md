@@ -31,14 +31,14 @@ Node.js 20.19 이상(또는 22.12 이상)이 필요합니다.
 
 ```sh
 npm install              # 처음 한 번 (엔진과 Vite를 받습니다)
-npm run viewer           # 개발 서버 → http://127.0.0.1:5180/
+npm run viewer           # 개발 서버 → http://127.0.0.1:5190/
 ```
 
 정적 사이트로 빌드해서 띄울 수도 있습니다. 결과물은 모델을 포함해 `dist/`에 생기고, 어느 경로에 올려도 동작합니다.
 
 ```sh
 npm run viewer:build     # dist/ 에 빌드
-npm run viewer:preview   # 빌드 결과 확인 → http://127.0.0.1:5181/
+npm run viewer:preview   # 빌드 결과 확인 → http://127.0.0.1:5191/
 ```
 
 **조작**
