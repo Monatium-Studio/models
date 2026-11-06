@@ -27,6 +27,14 @@ npm run model -- art/blender/<분류>/<이름>.py
 
 [MIT 라이선스](LICENSE). Monatium Studio가 만든 스크립트·모델 데이터·문서에 적용됩니다.
 
+## 출처 표시
+
+이 저장소의 모델을 직접 쓸 때는 (게임·영상·이미지·다른 프로젝트에 넣거나 고쳐서 쓰는 경우 모두) 출처를 표시해 주세요. 크레딧이나 설명란 등 보는 사람이 확인할 수 있는 곳에 아래처럼 적으면 됩니다.
+
+```
+Models by Monatium Studio (https://github.com/Monatium-Studio/models), MIT License
+```
+
 ## 저작권
 
 - 원작 「트릭컬 리바이브 (Trickcal: Revive)」의 캐릭터·세계관·디자인 등 원작에 대한 모든 권리는 **EPIDGames**에 있습니다. Trickcal Revive © EPIDGames Inc. All rights reserved.

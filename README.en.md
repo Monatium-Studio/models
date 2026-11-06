@@ -27,6 +27,14 @@ The result is written to `public/models/<category>/<name>.glb`.
 
 [MIT License](LICENSE). It covers the scripts, model data and documents made by Monatium Studio.
 
+## Attribution
+
+If you use the models from this repository directly (in a game, video, image or another project, as is or modified), please credit them. Put a line like the following somewhere viewers can see it, such as the credits or a description:
+
+```
+Models by Monatium Studio (https://github.com/Monatium-Studio/models), MIT License
+```
+
 ## Copyright
 
 - All rights to the original work *Trickcal: Revive*, including its characters, world and designs, belong to **EPIDGames**. Trickcal Revive © EPIDGames Inc. All rights reserved.
