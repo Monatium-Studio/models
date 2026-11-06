@@ -12,6 +12,7 @@ This repository collects the models and Blender scripts used to make the Trickca
 | `art/blender/**.py` | Headless Blender scripts that build the models (shared tools in `art/blender/lib`) |
 | `docs/art/` | Art guide and per-model design notes (start with `ART_GUIDE.md`) |
 | `public/ui/elf_logo_mono.svg` | Input read by the vehicle decal scripts |
+| `index.html`, `viewer.ts`, `vite.config.ts` | The model viewer (see [Model viewer](#model-viewer)) |
 
 ## Rebuilding
 
@@ -22,6 +23,36 @@ npm run model -- art/blender/<category>/<name>.py
 ```
 
 The result is written to `public/models/<category>/<name>.glb`.
+
+## Model viewer
+
+You can browse the models under `public/models` in a browser. The viewer is the model viewer from [strawberry-cake-engine](https://github.com/Monatium-Studio/strawberry-cake-engine).
+Requires Node.js 20.19 or later (or 22.12 or later).
+
+```sh
+npm install              # once (fetches the engine and Vite)
+npm run viewer           # dev server → http://127.0.0.1:5180/
+```
+
+You can also build it as a static site. The output, models included, goes to `dist/` and works from any path.
+
+```sh
+npm run viewer:build     # build into dist/
+npm run viewer:preview   # check the build → http://127.0.0.1:5181/
+```
+
+**Controls**
+
+| Action | How |
+|---|---|
+| Pick a model | Click it in the list on the left. It switches in place without reloading the page |
+| Search | Press `/` or Ctrl/Cmd+K. Only models whose path contains every typed word remain. Arrow keys select, Enter opens, Esc clears |
+| Previous / next | Click the list to focus it, then use the arrow keys |
+| Orbit | Drag to rotate, wheel to zoom, right-drag to pan |
+| Address | The current model stays in the URL as `?model=<category>/<name>.glb`, so reload, back and shared links work |
+| Cheek rig | Characters with cheek bones get a panel at the bottom right: P puff, S squash, L/R/B pull, Space release, H shake, J run |
+
+After rebuilding a model with `npm run model`, pick it again or reload to see the new file.
 
 ## AI-generated material
 

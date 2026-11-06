@@ -3,8 +3,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "model": "node scripts/blender.mjs"
+    "model": "node scripts/blender.mjs",
+    "viewer": "vite",
+    "viewer:build": "vite build",
+    "viewer:preview": "vite preview"
   },
   "license": "MIT",
-  "author": "Monatium Studio <dev@monatium.com>"
+  "author": "Monatium Studio <dev@monatium.com>",
+  "devDependencies": {
+    "strawberry-cake-engine": "github:Monatium-Studio/strawberry-cake-engine",
+    "vite": "^8.3.5"
+  }
 }

@@ -4,3 +4,4 @@ public/models/_tmp/
 shots/
 node_modules/
 .DS_Store
+dist/

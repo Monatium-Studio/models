@@ -12,6 +12,7 @@
 | `art/blender/**.py` | 모델을 만드는 Blender 헤드리스 스크립트 (공용 도구는 `art/blender/lib`) |
 | `docs/art/` | 아트 가이드와 모델별 설계 문서 (`ART_GUIDE.md`부터) |
 | `public/ui/elf_logo_mono.svg` | 차량 데칼 스크립트가 읽는 입력 |
+| `index.html`, `viewer.ts`, `vite.config.ts` | 모델 뷰어 (아래 [모델 뷰어](#모델-뷰어)) |
 
 ## 다시 만들기
 
@@ -22,6 +23,36 @@ npm run model -- art/blender/<분류>/<이름>.py
 ```
 
 결과는 같은 이름의 `public/models/<분류>/<이름>.glb`에 쓰입니다.
+
+## 모델 뷰어
+
+브라우저에서 `public/models` 아래 모델을 둘러볼 수 있습니다. 뷰어는 [strawberry-cake-engine](https://github.com/Monatium-Studio/strawberry-cake-engine)의 모델 뷰어를 씁니다.
+Node.js 20.19 이상(또는 22.12 이상)이 필요합니다.
+
+```sh
+npm install              # 처음 한 번 (엔진과 Vite를 받습니다)
+npm run viewer           # 개발 서버 → http://127.0.0.1:5180/
+```
+
+정적 사이트로 빌드해서 띄울 수도 있습니다. 결과물은 모델을 포함해 `dist/`에 생기고, 어느 경로에 올려도 동작합니다.
+
+```sh
+npm run viewer:build     # dist/ 에 빌드
+npm run viewer:preview   # 빌드 결과 확인 → http://127.0.0.1:5181/
+```
+
+**조작**
+
+| 동작 | 방법 |
+|---|---|
+| 모델 고르기 | 왼쪽 목록을 클릭합니다. 페이지를 다시 읽지 않고 그 자리에서 바뀝니다 |
+| 검색 | `/` 또는 Ctrl·Cmd+K로 검색칸에 들어갑니다. 띄어 쓴 낱말이 모두 경로에 들어 있는 모델만 남습니다. ↑↓로 고르고 Enter로 엽니다. Esc를 누르면 검색어가 지워집니다 |
+| 앞뒤 모델 | 목록을 클릭해 초점을 둔 뒤 ↑↓를 누릅니다 |
+| 돌려 보기 | 드래그는 회전, 휠은 확대·축소, 오른쪽 드래그는 이동입니다 |
+| 주소 | 지금 보는 모델이 `?model=<분류>/<이름>.glb`로 주소에 남습니다. 새로고침, 뒤로 가기, 링크 공유가 됩니다 |
+| 볼 리그 | 볼 본이 있는 캐릭터는 오른쪽 아래에 조작판이 생깁니다: P 부풀리기, S 눌림, L·R·B 늘리기, 스페이스 놓기, H 흔들기, J 달리기 |
+
+`npm run model`로 모델을 다시 만든 뒤에는 목록에서 다시 고르거나 새로고침하면 새 파일이 보입니다.
 
 ## AI 생성 자료
 
